@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dt_tweaks",
+  "name": "Cwelth Double Trouble tweaks",
+  "description": "Additional tweaks for CwelthDT modpack",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ZigTheHedge"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [mod_MinecraftForge]
+}
+]
