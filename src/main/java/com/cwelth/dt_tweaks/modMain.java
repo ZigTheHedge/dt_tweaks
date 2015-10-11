@@ -19,13 +19,13 @@ import net.minecraftforge.common.config.Configuration;
 /**
  * Created by zth on 05/10/15.
  */
-//@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION, dependencies = "required-after:GalacticraftCore;")
-@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION)
+@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION, dependencies = "required-after:GalacticraftCore;")
+//@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION)
 public class modMain {
 
     public static final String NAME = "Cwelth \"Double Trouble\" tweaks";
     public static final String MODID = "dt_tweaks";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.01";
 
     public int dimID;
     public int X;

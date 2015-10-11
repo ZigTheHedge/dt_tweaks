@@ -1,6 +1,7 @@
 package com.cwelth.dt_tweaks;
 
 import com.cwelth.dt_tweaks.blocks.BlockDriedWheat;
+import com.cwelth.dt_tweaks.blocks.BlockPetrifiedLava;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.material.Material;
 
@@ -10,10 +11,12 @@ import net.minecraft.block.material.Material;
 public class Blocks {
 
     public static BlockDriedWheat DriedWheat;
+    public static BlockPetrifiedLava PetrifiedLava;
 
 
     public static final void init()
     {
         GameRegistry.registerBlock(DriedWheat = new BlockDriedWheat("driedwheat", Material.cloth), "driedwheat");
+        GameRegistry.registerBlock(PetrifiedLava = new BlockPetrifiedLava("petrified_lava", Material.cloth), "petrified_lava");
     }
 }
