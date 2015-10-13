@@ -27,6 +27,7 @@ public class GCWorldGenExtender {
 
     public void generateSurface(World worldObj, Random rand, int chunkX, int chunkZ)
     {
+        if(!modMain.instance.isWGEnabled)return;
         int X = chunkX + rand.nextInt(16);
         int Z = chunkZ + rand.nextInt(16);
         int Y = 127;
@@ -48,8 +49,7 @@ public class GCWorldGenExtender {
 
             int index = worldObj.rand.nextInt(structures.size());
             rGen.setResourceFile(structures.get(index));
-            if(modMain.instance.isWGEnabled)
-                rGen.generate(worldObj, rand, X, Y, Z);
+            rGen.generate(worldObj, rand, X, Y, Z);
         }
     }
 

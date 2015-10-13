@@ -4,9 +4,9 @@ import com.cwelth.dt_tweaks.modMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeHooks;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class BlockPetrifiedLava extends Block {
 
     @Override
     public void onBlockDestroyedByPlayer(World worldObj, int x, int y, int z, int metadata) {
-        worldObj.setBlock(x, y, z, Block.getBlockFromName("minecraft:lava"));
+        worldObj.setBlock(x, y, z, Blocks.lava);
     }
 
     @Override

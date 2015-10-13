@@ -92,7 +92,9 @@ public class playerSpawn {
                     //FMLLog.info("DT_TWEAKS: Trying to teleport player to the: %s", mc.worldServerForDimension(modMain.instance.dimID).getWorldInfo().getWorldName());
                     mc.getConfigurationManager().transferPlayerToDimension(en, modMain.instance.dimID, new spawnTeleporter(mc.worldServerForDimension(modMain.instance.dimID)));
                 }
+
             }
+
     }
 
     @SubscribeEvent
