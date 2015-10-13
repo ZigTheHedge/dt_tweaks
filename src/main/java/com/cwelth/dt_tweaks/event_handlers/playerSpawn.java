@@ -1,11 +1,9 @@
-package com.cwelth.dt_tweaks.eventHandliers;
+package com.cwelth.dt_tweaks.event_handlers;
 
 import com.cwelth.dt_tweaks.modMain;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -13,9 +11,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
@@ -23,7 +18,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.TimerTask;
 
 /**
  * Created by zth on 06/10/15.
@@ -115,7 +109,7 @@ public class playerSpawn {
         if(event.entity instanceof EntityPlayerMP) {
             Iterator<EntityItem> sItem = event.drops.iterator();
             ArrayList<EntityItem> resultDrops = new ArrayList<EntityItem>();
-            ArrayList<ItemStack> keepedDrops = new ArrayList<ItemStack>();
+            ArrayList<ItemStack> keptDrops = new ArrayList<ItemStack>();
 
             while(sItem.hasNext())
             {
@@ -125,14 +119,14 @@ public class playerSpawn {
                 if(iNext.getEntityItem().getItemDamage() > 0)itemName += "|" + iNext.getEntityItem().getItemDamage();
                 if(modMain.instance.itemsNotToBeDropped.contains( itemName ) || modMain.instance.itemsNotToBeDropped.contains( itemNameNoMeta+"|*" ))
                 {
-                    keepedDrops.add(iNext.getEntityItem());
+                    keptDrops.add(iNext.getEntityItem());
                 } else
                 {
                     resultDrops.add(iNext);
 
                 }
             }
-            plKeepInv.put(event.entityPlayer.getUniqueID().toString(), keepedDrops);
+            plKeepInv.put(event.entityPlayer.getUniqueID().toString(), keptDrops);
             event.drops.clear();
             event.drops.addAll(resultDrops);
         }

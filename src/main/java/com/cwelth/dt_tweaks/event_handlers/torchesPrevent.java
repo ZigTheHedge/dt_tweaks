@@ -1,7 +1,6 @@
-package com.cwelth.dt_tweaks.eventHandliers;
+package com.cwelth.dt_tweaks.event_handlers;
 
 import com.cwelth.dt_tweaks.modMain;
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.item.Item;
@@ -18,7 +17,7 @@ public class torchesPrevent {
         if(event.player.getEntityWorld().provider.dimensionId == modMain.instance.moonDimID)
         {
             String iName = Item.itemRegistry.getNameForObject(event.itemInHand.getItem());
-            if((iName.contains("torch") || iName.contains("Torch")) && !iName.equals("GalacticraftCore:tile.glowstoneTorch"))event.setCanceled(true);
+            if((iName.contains("torch") || iName.contains("Torch")) && !iName.equals("GalacticraftCore:tile.glowstoneTorch") && !iName.equals("minecraft:torch"))event.setCanceled(true);
         }
     }
 }

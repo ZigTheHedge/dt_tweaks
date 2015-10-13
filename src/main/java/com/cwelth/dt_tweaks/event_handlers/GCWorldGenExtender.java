@@ -1,11 +1,10 @@
-package com.cwelth.dt_tweaks.eventHandliers;
+package com.cwelth.dt_tweaks.event_handlers;
 
 import com.cwelth.dt_tweaks.modMain;
 import com.cwelth.dt_tweaks.structures.ruinsParser;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
 
 import java.io.File;
 import java.util.ArrayList;

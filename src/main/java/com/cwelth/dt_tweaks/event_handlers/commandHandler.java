@@ -1,4 +1,4 @@
-package com.cwelth.dt_tweaks.eventHandliers;
+package com.cwelth.dt_tweaks.event_handlers;
 
 import com.cwelth.dt_tweaks.modMain;
 import com.cwelth.dt_tweaks.structures.ruinsParser;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by zth on 06/10/15.
  */
-public class commandHandlier implements ICommand {
+public class commandHandler implements ICommand {
     @Override
     public String getCommandName() {
         return "sset";
