@@ -1,4 +1,4 @@
-package com.cwelth.dt_tweaks.eventHandliers;
+package com.cwelth.dt_tweaks.event_handlers;
 
 import com.cwelth.dt_tweaks.modMain;
 import net.minecraft.entity.Entity;

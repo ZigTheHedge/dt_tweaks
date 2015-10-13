@@ -1,9 +1,9 @@
 package com.cwelth.dt_tweaks;
 
-import com.cwelth.dt_tweaks.eventHandliers.GCWorldGenExtender;
-import com.cwelth.dt_tweaks.eventHandliers.commandHandlier;
-import com.cwelth.dt_tweaks.eventHandliers.playerSpawn;
-import com.cwelth.dt_tweaks.eventHandliers.torchesPrevent;
+import com.cwelth.dt_tweaks.event_handlers.GCWorldGenExtender;
+import com.cwelth.dt_tweaks.event_handlers.commandHandler;
+import com.cwelth.dt_tweaks.event_handlers.playerSpawn;
+import com.cwelth.dt_tweaks.event_handlers.torchesPrevent;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -11,7 +11,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
@@ -19,13 +18,12 @@ import net.minecraftforge.common.config.Configuration;
 /**
  * Created by zth on 05/10/15.
  */
-//@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION, dependencies = "required-after:GalacticraftCore;")
-@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION)
+@Mod(modid = modMain.MODID, name = modMain.NAME, version = modMain.VERSION, dependencies = "required-after:GalacticraftCore;")
 public class modMain {
 
     public static final String NAME = "Cwelth \"Double Trouble\" tweaks";
     public static final String MODID = "dt_tweaks";
-    public static final String VERSION = "1.01";
+    public static final String VERSION = "1.02";
 
     public int dimID;
     public int X;
@@ -111,7 +109,7 @@ public class modMain {
     @Mod.EventHandler
     public void serverLoad(FMLServerStartingEvent event)
     {
-        event.registerServerCommand(new commandHandlier());
+        event.registerServerCommand(new commandHandler());
     }
 
 }
