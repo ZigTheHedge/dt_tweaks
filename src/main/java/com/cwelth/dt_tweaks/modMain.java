@@ -23,7 +23,7 @@ public class modMain {
 
     public static final String NAME = "Cwelth \"Double Trouble\" tweaks";
     public static final String MODID = "dt_tweaks";
-    public static final String VERSION = "1.02";
+    public static final String VERSION = "1.03";
 
     public int dimID;
     public int X;
