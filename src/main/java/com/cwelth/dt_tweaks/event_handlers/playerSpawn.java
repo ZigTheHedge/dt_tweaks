@@ -43,7 +43,7 @@ public class playerSpawn {
                 }
 
                 //Starter kit part
-                if(isPlayerFirstJoined.get(((EntityPlayer)event.entity).getUniqueID().toString()).equals(Boolean.TRUE))
+                if(modMain.instance.isSKEnabled && isPlayerFirstJoined.get(((EntityPlayer)event.entity).getUniqueID().toString()).equals(Boolean.TRUE))
                 {
                     if(!modMain.instance.isEnabled)isPlayerFirstJoined.put(((EntityPlayer) event.entity).getUniqueID().toString(), Boolean.FALSE);
                     String[] starterKit = modMain.instance.itemsToGiveAtFirstLogon.split(",");
