@@ -21,7 +21,7 @@ public class BlockPetrifiedLava extends Block {
         this.setCreativeTab(CreativeTabs.tabBlock);
 
         this.setHardness(0.2F);
-        this.setLightLevel(2);
+        this.setLightLevel(0.4F);
         this.setResistance(2.0F);
 
         this.setStepSound(soundTypeStone);
