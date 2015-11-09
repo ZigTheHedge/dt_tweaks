@@ -11,12 +11,14 @@ import net.minecraft.block.material.Material;
 public class Blocks {
 
     public static BlockDriedWheat DriedWheat;
+    public static BlockPetrifiedLava PetrifieddLava;
     public static BlockPetrifiedLava PetrifiedLava;
 
 
     public static final void init()
     {
         GameRegistry.registerBlock(DriedWheat = new BlockDriedWheat("driedwheat", Material.cloth), "driedwheat");
-        GameRegistry.registerBlock(PetrifiedLava = new BlockPetrifiedLava("petrifiedd_lava", Material.cloth), "petrifiedd_lava");
+        GameRegistry.registerBlock(PetrifieddLava = new BlockPetrifiedLava("petrifiedd_lava", Material.cloth), "petrifiedd_lava");
+        GameRegistry.registerBlock(PetrifiedLava = new BlockPetrifiedLava("petrified_lava", Material.cloth), "petrified_lava");
     }
 }

@@ -17,7 +17,7 @@ public class torchesPrevent {
         if(event.player.getEntityWorld().provider.dimensionId == modMain.instance.moonDimID)
         {
             String iName = Item.itemRegistry.getNameForObject(event.itemInHand.getItem());
-            if((iName.contains("torch") || iName.contains("Torch")) && !iName.equals("GalacticraftCore:tile.glowstoneTorch") && !iName.equals("minecraft:torch"))event.setCanceled(true);
+            if((iName.contains("torch") || iName.contains("Torch")) && !iName.equals("GalacticraftCore:tile.glowstoneTorch"))event.setCanceled(true);
         }
     }
 }
